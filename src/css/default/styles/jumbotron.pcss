@@ -1,0 +1,23 @@
+.jumbotron {
+    background-color: $jumbotron-background;
+    color: $jumbotron-color;
+    padding: $jumbotron-padding-y $jumbotron-padding-x;
+    box-shadow: $jumbotron-box-shadow;
+    border-radius: $jumbotron-border-radius;
+
+    @media screen and (min-width: $screen-sm-min) {
+        padding: calc($jumbotron-padding-y * 1.5) calc($jumbotron-padding-x * 1.5);
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+        padding: calc($jumbotron-padding-y * 2) calc($jumbotron-padding-x * 2);
+    }
+
+    @media screen and (min-width: $screen-lg-min) {
+        padding: calc($jumbotron-padding-y * 2.5) calc($jumbotron-padding-x * 2.5);
+    }
+
+    @media screen and (min-width: $screen-xl-min) {
+        padding: calc($jumbotron-padding-y * 3) calc($jumbotron-padding-x * 3);
+    }
+}

@@ -1,0 +1,292 @@
+/* text colors */
+$text-contrast-highest: #000;
+$text-contrast-higher: #222;
+$text-contrast-high: #333;
+$text-contrast-base: #555;
+$text-contrast-low: #999;
+$text-contrast-lower: #ccc;
+$text-contrast-lowest: #eee;
+
+$text-color-default: $text-contrast-high;
+$text-color-inverse: #fff;
+
+
+/* theme colors */
+$brand-primary: $siteColor1;
+$brand-secondary: $siteColor2;
+$brand-inverse: $siteColor4;
+$brand-success: #449d44;
+$brand-information: #5bc0de;
+$brand-warning: #ec971f;
+$brand-alert: #a02622;
+$brand-focused: #129fea;
+$brand-invalid: #e9322d;
+$brand-hover: #5bc0de;
+$brand-selected: #129fea;
+$brand-highlighted: #bf7c44;
+
+$state-success-text: color($brand-success a(95%));
+$state-success-background: color($brand-success a(5%));
+$state-success-border: color($brand-success a(60%));
+
+$state-information-text: color($brand-information a(95%));
+$state-information-background: color($brand-information a(5%));
+$state-information-border: color($brand-information a(60%));
+
+$state-warning-text: color($brand-warning a(95%));
+$state-warning-background: color($brand-warning a(5%));
+$state-warning-border: color($brand-warning a(60%));
+
+$state-alert-text: color($brand-alert a(95%));
+$state-alert-background: color($brand-alert a(5%));
+$state-alert-border: color($brand-alert a(60%));
+
+$state-focused-text: color($brand-focused a(90%));
+$state-focused-background: color($brand-focused a(10%));
+$state-focused-border: $brand-focused;
+
+$state-invalid-text: color($brand-invalid a(90%));
+$state-invalid-background: color($brand-invalid a(10%));
+$state-invalid-border: $brand-invalid;
+
+$state-hover-text: color($brand-hover a(90%));
+$state-hover-background: color($brand-hover a(10%));
+$state-hover-border: $brand-hover;
+
+$state-selected-text: color($brand-selected a(90%));
+$state-selected-background: color($brand-selected a(10%));
+$state-selected-border: $brand-selected;
+
+$state-highlight-text: color($brand-highlighted a(90%));
+$state-highlight-background: color($brand-highlighted a(10%));
+$state-highlight-border: $brand-highlighted;
+
+$color-line-break: #c3c3c3;
+$color-line-break-softer: color($color-line-break a(10%));
+
+$drop-shadow-color: rgba(0, 0, 0, 0.2);
+
+$primer-background: $text-contrast-high;
+$main-background: #fff;
+
+$header-background: $text-contrast-lowest;
+$header-border-top-color: $color-line-break;
+$header-border-bottom-color: $color-line-break;
+$header-dropshadow: 0 4px 4px -4px $drop-shadow-color;
+
+$footer-background: $text-contrast-high;
+$footer-color: $text-color-inverse;
+
+
+/* typography */
+$font-size-2x: 30px;
+$font-size-xl: 24px;
+$font-size-lg: 18px;
+$font-size-md: 14px;
+$font-size-sm: 12px;
+$font-size-xs: 8px;
+
+$font-size-h1: 32px;
+$font-size-h2: 26px;
+$font-size-h3: 20px;
+$font-size-h4: 16px;
+$font-size-h5: 16px;
+$font-size-h6: 12px;
+
+$margin-unit: $font-size-md;
+$padding-unit: $font-size-md;
+
+$default-border-radius: 4px;
+
+$avatar-lg: 48px;
+$avatar-md: 32px;
+$avatar-sm: 24px;
+
+$boxed-text-background: hsla(0,0%,87%,.4);
+$boxed-text-color: #555;
+$boxed-text-border-color: hsla(0,0%,80%,.4);
+$boxed-text-bottom-border-color: hsla(0,0%,73%,.4);
+$boxed-text-box-shadow: inset 0 -1px 0 hsla(0,0%,73%,.4);
+
+
+/* menus */
+$menu-default-link-color: $text-color-default;
+$menu-default-link-active-color: $brand-secondary;
+$menu-default-background: $main-background;
+
+$menu-inverse-link-color: $text-color-inverse;
+$menu-inverse-link-active-color: $brand-secondary;
+$menu-inverse-background: $brand-inverse;
+
+$menu-section-divider-color: #e5e5e5;
+$menu-section-header-color: $text-contrast-low;
+$menu-box-shadow: 0 4px 4px -3px $drop-shadow-color;
+
+
+/* buttons */
+$button-default-color: $text-color-default;
+$button-default-background: #fff;
+$button-default-border: $text-contrast-lower;
+$button-border-radius: $default-border-radius;
+
+$button-primary-color: $text-color-inverse;
+$button-primary-background: $brand-primary;
+$button-primary-border: color($button-primary-background lightness(-5%));
+
+$button-secondary-color: $text-color-inverse;
+$button-secondary-background: $brand-secondary;
+$button-secondary-border: color($button-secondary-background lightness(-5%));
+
+$button-inverse-color: $text-color-inverse;
+$button-inverse-background: $brand-inverse;
+$button-inverse-border: color($button-inverse-background lightness(-5%));
+
+$button-success-color: $text-color-inverse;
+$button-success-background: $brand-success;
+$button-success-border: color($button-success-background lightness(-5%));
+
+$button-information-color: $text-color-inverse;
+$button-information-background: $brand-information;
+$button-information-border: color($button-information-background lightness(-5%));
+
+$button-warning-color: $text-color-inverse;
+$button-warning-background: $brand-warning;
+$button-warning-border: color($button-warning-background lightness(-5%));
+
+$button-alert-color: $text-color-inverse;
+$button-alert-background: $brand-alert;
+$button-alert-border: color($button-alert-background lightness(-5%));
+
+
+/* tiles */
+$tile-color: $text-color-default;
+$tile-background: #fff;
+$tile-border-color: $color-line-break;
+$tile-border-width: 1px;
+$tile-border-radius: $default-border-radius;
+$tile-padding-x: $padding-unit;
+$tile-padding-y: $padding-unit;
+
+$tile-success-color: $state-success-text;
+$tile-success-background: $state-success-background;
+$tile-success-border-color: $state-success-border;
+
+$tile-information-color: $state-information-text;
+$tile-information-background: $state-information-background;
+$tile-information-border-color: $state-information-border;
+
+$tile-warning-color: $state-warning-text;
+$tile-warning-background: $state-warning-background;
+$tile-warning-border-color: $state-warning-border;
+
+$tile-alert-color: $state-alert-text;
+$tile-alert-background: $state-alert-background;
+$tile-alert-border-color: $state-alert-border;
+
+
+/* cards */
+$card-background: #fff;
+$card-color: $text-color-default;
+$card-header-background: $text-contrast-lowest;
+$card-header-color: $card-color;
+$card-footer-background: $text-contrast-lowest;
+$card-footer-color: $card-color;
+$card-border-color: $color-line-break;
+$card-border-width: 1px;
+$card-border-radius: $default-border-radius;
+$card-box-shadow: 0 3px 4px 0 $drop-shadow-color;
+$card-padding-x: $padding-unit;
+$card-padding-y: $padding-unit;
+
+$card-primary-background: $card-background;
+$card-primary-color: $card-color;
+$card-primary-header-background: $brand-primary;
+$card-primary-header-color: $text-color-inverse;
+$card-primary-footer-background: $card-footer-background;
+$card-primary-footer-color: $card-footer-color;
+$card-primary-border-color: color($brand-primary lightness(-5%));
+
+$card-secondary-background: $card-background;
+$card-secondary-color: $card-color;
+$card-secondary-header-background: $brand-secondary;
+$card-secondary-header-color: $text-color-inverse;
+$card-secondary-footer-background: $card-footer-background;
+$card-secondary-footer-color: $card-footer-color;
+$card-secondary-border-color: color($brand-secondary lightness(-5%));
+
+$card-inverse-background: $card-background;
+$card-inverse-color: $card-color;
+$card-inverse-header-background: $brand-inverse;
+$card-inverse-header-color: $text-color-inverse;
+$card-inverse-footer-background: $card-footer-background;
+$card-inverse-footer-color: $card-footer-color;
+$card-inverse-border-color: color($brand-inverse lightness(-5%));
+
+$card-success-background: $card-background;
+$card-success-color: $card-color;
+$card-success-header-background: $state-success-background;
+$card-success-header-color: $state-success-text;
+$card-success-footer-background: $card-footer-background;
+$card-success-footer-color: $card-footer-color;
+$card-success-border-color: $state-success-border;
+
+$card-information-background: $card-background;
+$card-information-color: $card-color;
+$card-information-header-background: $state-information-background;
+$card-information-header-color: $state-information-text;
+$card-information-footer-background: $card-footer-background;
+$card-information-footer-color: $card-footer-color;
+$card-information-border-color: $state-information-border;
+
+$card-warning-background: $card-background;
+$card-warning-color: $card-color;
+$card-warning-header-background: $state-warning-background;
+$card-warning-header-color: $state-warning-text;
+$card-warning-footer-background: $card-footer-background;
+$card-warning-footer-color: $card-footer-color;
+$card-warning-border-color: $state-warning-border;
+
+$card-alert-background: $card-background;
+$card-alert-color: $card-color;
+$card-alert-header-background: $state-alert-background;
+$card-alert-header-color: $state-alert-text;
+$card-alert-footer-background: $card-footer-background;
+$card-alert-footer-color: $card-footer-color;
+$card-alert-border-color: $state-alert-border;
+
+
+/* jumbotron */
+$jumbotron-background: $text-contrast-lowest;
+$jumbotron-color: $text-color-default;
+$jumbotron-border-radius: $default-border-radius;
+$jumbotron-box-shadow: 0 3px 4px 0 $drop-shadow-color;
+$jumbotron-padding-x: $padding-unit;
+$jumbotron-padding-y: $padding-unit;
+
+
+/* form */
+$input-border-radius: $default-border-radius;
+
+
+/* z-index */
+$z-index-sticky: 1100;
+$z-index-header: 1000;
+$z-index-footer: 900;
+
+
+/* media break points */
+$screen-xs-min: 320px;
+$screen-xs-max: 767px;
+
+$screen-sm-min: 768px;
+$screen-sm-max: 1023px;
+
+$screen-md-min: 1024px;
+$screen-md-max: 1279px;
+
+$screen-lg-min: 1280px;
+$screen-lg-max: 1679px;
+
+$screen-xl-min: 1680px;
+
+$menu-collapse: $screen-sm-max;

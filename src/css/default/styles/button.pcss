@@ -1,0 +1,143 @@
+@mixin button-variant(
+    $color: $text-color-default,
+    $background: $main-background,
+    $border: $text-contrast-lower
+) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    &:focus,
+    &.focus,
+    &:hover,
+    &.hover,
+    &:active,
+    &.active {
+        background-image: none;
+        box-shadow: none;
+        color: $color;
+        background-color: color($background lightness(-10%));
+        border-color: color($border lightness(-10%));
+    }
+}
+
+.pure-button {
+    border: 1px solid transparent;
+    border-radius: $button-border-radius;
+
+    @include button-variant($button-default-color, $button-default-background, $button-default-border);
+
+    &.button-primary {
+        @include button-variant(
+            $button-primary-color,
+            $button-primary-background,
+            $button-primary-border
+        );
+    }
+
+    &.button-secondary {
+        @include button-variant(
+            $button-secondary-color,
+            $button-secondary-background,
+            $button-secondary-border
+        );
+    }
+
+    &.button-inverse {
+        @include button-variant(
+            $button-inverse-color,
+            $button-inverse-background,
+            $button-inverse-border
+        );
+    }
+
+    &.button-success {
+        @include button-variant(
+            $button-success-color,
+            $button-success-background,
+            $button-success-border
+        );
+    }
+
+    &.button-information {
+        @include button-variant(
+            $button-information-color,
+            $button-information-background,
+            $button-information-border
+        );
+    }
+
+    &.button-warning {
+        @include button-variant(
+            $button-warning-color,
+            $button-warning-background,
+            $button-warning-border
+        );
+    }
+
+    &.button-alert {
+        @include button-variant(
+            $button-alert-color,
+            $button-alert-background,
+            $button-alert-border
+        );
+    }
+
+    &.button-link {
+        color: $button-default-color;
+        background-color: transparent;
+        border-color: transparent;
+        text-decoration: underline;
+
+        &.no-decorator {
+            text-decoration: none;
+        }
+
+        &:focus,
+        &.focus,
+        &:hover,
+        &.hover,
+        &:active,
+        &.active {
+            background-image: none;
+            color: $brand-primary;
+        }
+    }
+
+    &.button-link.inverse-link {
+        color: $button-inverse-color;
+        background-color: transparent;
+        border-color: transparent;
+        text-decoration: underline;
+
+        &.no-decorator {
+            text-decoration: none;
+        }
+
+        &:focus,
+        &.focus,
+        &:hover,
+        &.hover,
+        &:active,
+        &.active {
+            background-image: none;
+            color: $brand-secondary;
+        }
+    }
+
+    &.button-xlarge {
+        font-size: $font-size-xl;
+    }
+
+    &.button-large {
+        font-size: $font-size-lg;
+    }
+
+    &.button-small {
+        font-size: $font-size-sm;
+    }
+
+    &.button-xsmall {
+        font-size: $font-size-xs;
+    }
+}

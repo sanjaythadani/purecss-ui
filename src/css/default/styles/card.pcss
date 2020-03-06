@@ -1,0 +1,175 @@
+@mixin card-variant(
+    $color: $text-color-default,
+    $background: $main-background,
+    $border: $text-contrast-lower,
+    $header-background: $main-background,
+    $header-color: $text-contrast-lower,
+    $footer-background: $main-background,
+    $footer-color: $text-contrast-lower
+) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    .card-header {
+        color: $header-color;
+        background-color: $header-background;
+        border-bottom: 1px solid $border;
+    }
+
+    .card-footer {
+        color: $footer-color;
+        background-color: $footer-background;
+        border-top: 1px solid $border;
+    }
+}
+
+.card {
+    position: relative;
+    border: $card-border-width solid transparent;
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+    background-color: $card-background;
+    overflow: hidden;
+
+    @include card-variant(
+        $card-color,
+        $card-background,
+        $card-border-color,
+        $card-header-background,
+        $card-header-color,
+        $card-footer-background,
+        $card-footer-color
+    );
+
+    &.card-primary {
+        @include card-variant(
+            $card-primary-color,
+            $card-primary-background,
+            $card-primary-border-color,
+            $card-primary-header-background,
+            $card-primary-header-color,
+            $card-primary-footer-background,
+            $card-primary-header-color
+        );
+    }
+
+    &.card-primary-nf {
+        @include card-variant(
+            $card-primary-color,
+            $card-primary-background,
+            $card-primary-border-color,
+            $card-primary-background,
+            $card-primary-header-background,
+            $card-primary-footer-background,
+            $card-primary-header-color
+        );
+    }
+
+    &.card-secondary {
+        @include card-variant(
+            $card-secondary-color,
+            $card-secondary-background,
+            $card-secondary-border-color,
+            $card-secondary-header-background,
+            $card-secondary-header-color,
+            $card-secondary-footer-background,
+            $card-secondary-header-color
+        );
+    }
+
+    &.card-secondary-nf {
+        @include card-variant(
+            $card-secondary-color,
+            $card-secondary-background,
+            $card-secondary-border-color,
+            $card-secondary-background,
+            $card-secondary-header-background,
+            $card-secondary-footer-background,
+            $card-secondary-header-color
+        );
+    }
+
+    &.card-inverse {
+        @include card-variant(
+            $card-inverse-color,
+            $card-inverse-background,
+            $card-inverse-border-color,
+            $card-inverse-header-background,
+            $card-inverse-header-color,
+            $card-inverse-footer-background,
+            $card-inverse-header-color
+        );
+    }
+
+    &.card-inverse-nf {
+        @include card-variant(
+            $card-inverse-color,
+            $card-inverse-background,
+            $card-inverse-border-color,
+            $card-inverse-background,
+            $card-inverse-header-background,
+            $card-inverse-footer-background,
+            $card-inverse-header-color
+        );
+    }
+
+    &.card-success {
+        @include card-variant(
+            $card-success-color,
+            $card-success-background,
+            $card-success-border-color,
+            $card-success-header-background,
+            $card-success-header-color,
+            $card-success-footer-background,
+            $card-success-header-color
+        );
+    }
+
+    &.card-information {
+        @include card-variant(
+            $card-information-color,
+            $card-information-background,
+            $card-information-border-color,
+            $card-information-header-background,
+            $card-information-header-color,
+            $card-information-footer-background,
+            $card-information-header-color
+        );
+    }
+
+    &.card-warning {
+        @include card-variant(
+            $card-warning-color,
+            $card-warning-background,
+            $card-warning-border-color,
+            $card-warning-header-background,
+            $card-warning-header-color,
+            $card-warning-footer-background,
+            $card-warning-header-color
+        );
+    }
+
+    &.card-alert {
+        @include card-variant(
+            $card-alert-color,
+            $card-alert-background,
+            $card-alert-border-color,
+            $card-alert-header-background,
+            $card-alert-header-color,
+            $card-alert-footer-background,
+            $card-alert-header-color
+        );
+    }
+
+    .card-body {
+        padding: $card-padding-y $card-padding-x;
+    }
+
+    .card-header,
+    .card-footer {
+        padding: $card-padding-y $card-padding-x;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

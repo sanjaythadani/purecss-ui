@@ -1,0 +1,48 @@
+{
+  "name": "purecss-ui",
+  "version": "1.0.0",
+  "description": "Design system built on Pure.css",
+  "author": "Sanjay Thadani",
+  "private": false,
+  "files": [
+    "dist/*",
+    "public/*",
+    "src/*"
+  ],
+  "scripts": {
+    "serve": "node ./src/js/app.js",
+    "watch": "gulp watch",
+    "build:dev": "gulp build:dev",
+    "build:dist": "gulp build:dist"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "purecss": "^1.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "event-stream": "^4.0.1",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-live-server": "0.0.31",
+    "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "hogan-express": "^0.5.2",
+    "postcss-calc": "^7.0.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-import-ext-glob": "^1.1.0",
+    "postcss-replace": "^1.1.0",
+    "precss": "^4.0.0",
+    "rework": "^1.0.1",
+    "rework-pure-grids": "^1.0.0",
+    "yargs": "^15.1.0"
+  }
+}

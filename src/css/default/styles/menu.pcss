@@ -1,0 +1,88 @@
+@mixin menu-variant($color: $menu-default-link-color, $active-color: $menu-default-link-active-color, $background: $menu-default-background) {
+    background-color: $background;
+
+    .pure-menu-link {
+        display: inline-block;
+        color: $color;
+
+        &:focus,
+        &.focus {
+            background-color: transparent;
+            outline: none;
+        }
+
+        &:hover,
+        &.hover,
+        &:active,
+        &.active {
+            background-color: transparent;
+            outline: none;
+            color: $active-color;
+        }
+    }
+}
+
+.pure-menu {
+    &.pure-menu-horizontal {
+        min-height: 50px;
+        border-top: 1px solid $color-line-break;
+        border-bottom: 1px solid $color-line-break;
+        box-shadow: $menu-box-shadow;
+        white-space: normal;
+
+        >* {
+            min-height: 48px;
+        }
+
+        .pure-menu-link {
+            padding-top: 0;
+            padding-bottom: 0;
+            font-size: $font-size-sm;
+            font-weight: bold;
+
+            &.pure-button.button-link {
+                text-decoration: none;
+            }
+        }
+
+        @include menu-variant;
+
+        &.menu-inverse {
+            @include menu-variant($menu-inverse-link-color, $menu-inverse-link-active-color, $menu-inverse-background);
+        }
+
+        .brand {
+            display: flex;
+            min-height: 48px;
+
+            .brand-logo {
+                height: 40px;
+            }
+
+            .brand-title {
+                vertical-align: 50%;
+            }
+        }
+
+        img,
+        .fas,
+        .far,
+        .fal,
+        .fad,
+        .fab,
+        .fa-stack {
+            pointer-events: none;
+        }
+    }
+}
+
+@media screen and (max-width: $menu-collapse) {
+    .pure-menu {
+        &.pure-menu-horizontal {
+            .pure-menu-link {
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+        }
+    }
+}

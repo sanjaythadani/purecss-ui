@@ -1,0 +1,63 @@
+@mixin tile-variant(
+    $color: $text-color-default,
+    $background: $main-background,
+    $border: $text-contrast-lower
+) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+}
+
+.tile {
+    position: relative;
+    border: $tile-border-width solid transparent;
+    border-radius: $tile-border-radius;
+    background-color: $tile-background;
+    padding: $tile-padding-y $tile-padding-x;
+
+    @include tile-variant(
+        $tile-color,
+        $tile-background,
+        $tile-border-color
+    );
+
+    &.tile-success {
+        @include tile-variant(
+            $tile-success-color,
+            $tile-success-background,
+            $tile-success-border-color
+        );
+    }
+
+    &.tile-information {
+        @include tile-variant(
+            $tile-information-color,
+            $tile-information-background,
+            $tile-information-border-color
+        );
+    }
+
+    &.tile-warning {
+        @include tile-variant(
+            $tile-warning-color,
+            $tile-warning-background,
+            $tile-warning-border-color
+        );
+    }
+
+    &.tile-alert {
+        @include tile-variant(
+            $tile-alert-color,
+            $tile-alert-background,
+            $tile-alert-border-color
+        );
+    }
+
+    .close {
+        position: absolute;
+        right: 0;
+        top: 1px;
+        background-color: transparent;
+        border: none;
+    }
+}

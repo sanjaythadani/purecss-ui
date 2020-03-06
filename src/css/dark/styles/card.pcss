@@ -1,0 +1,37 @@
+.card {
+    &.card-primary-nf {
+        @include card-variant(
+            $card-primary-color,
+            $card-primary-background,
+            $card-primary-border-color,
+            $card-primary-background,
+            $brand-primary,
+            $card-primary-footer-background,
+            $card-primary-header-color
+        );
+    }
+
+    &.card-secondary-nf {
+        @include card-variant(
+            $card-secondary-color,
+            $card-secondary-background,
+            $card-secondary-border-color,
+            $card-secondary-background,
+            $brand-secondary,
+            $card-secondary-footer-background,
+            $card-secondary-header-color
+        );
+    }
+
+    &.card-inverse-nf {
+        @include card-variant(
+            $card-inverse-color,
+            $card-inverse-background,
+            $card-inverse-border-color,
+            $card-inverse-background,
+            $brand-inverse,
+            $card-inverse-footer-background,
+            $card-inverse-header-color
+        );
+    }
+}

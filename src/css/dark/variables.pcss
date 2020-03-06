@@ -1,0 +1,142 @@
+/* text colors */
+$text-contrast-highest: #eee;
+$text-contrast-higher: #ccc;
+$text-contrast-high: #999;
+$text-contrast-base: #555;
+$text-contrast-low: #333;
+$text-contrast-lower: #222;
+$text-contrast-lowest: #000;
+
+$text-color-default: color(#fff a(88%));
+$text-color-inverse: $text-contrast-lower;
+
+
+/* theme colors */
+$brand-inverse: $text-contrast-higher;
+
+$color-line-break: #555;
+
+$drop-shadow-color: rgba(0, 0, 0, 1);
+
+$primer-background: #111;
+$main-background: $text-contrast-lower;
+
+$header-background: $text-contrast-low;
+$header-border-top-color: $header-background;
+$header-border-bottom-color: $color-line-break;
+$header-dropshadow: 0 4px 4px -4px $drop-shadow-color;
+
+$footer-background: #111;
+
+
+/* typography */
+$boxed-text-background: hsla(0,0%,50%,.17);
+$boxed-text-color: #ccc;
+$boxed-text-border-color: rgba(51,51,51,.6);
+$boxed-text-bottom-border-color: rgba(68,68,68,.6);
+$boxed-text-box-shadow: inset 0 -1px 0 rgba(68,68,68,.6);
+
+
+/* menus */
+$menu-default-link-color: $text-color-default;
+$menu-default-link-active-color: $brand-secondary;
+$menu-default-background: $text-contrast-low;
+
+$menu-inverse-link-color: $text-color-inverse;
+$menu-inverse-link-active-color: $brand-secondary;
+$menu-inverse-background: $brand-inverse;
+
+$menu-box-shadow: 0 4px 2px -1px $drop-shadow-color;
+
+
+/* buttons */
+$button-default-color: $text-color-default;
+$button-default-background: $main-background;
+$button-default-border: $text-contrast-high;
+
+$button-inverse-color: $text-contrast-low;
+$button-inverse-background: $brand-inverse;
+$button-inverse-border: color($button-inverse-background lightness(-5%));
+
+
+/* toggles */
+$checkbox-default: rgba(255, 255, 255, 0.7);
+
+$radio-default: rgba(255, 255, 255, 0.8);
+
+
+/* tiles */
+$tile-color: $text-color-default;
+$tile-background: $main-background;
+
+
+/* cards */
+$card-background: $text-contrast-low;
+$card-color: $text-color-default;
+$card-header-background: $text-contrast-lower;
+$card-header-color: $card-color;
+$card-footer-background: $text-contrast-lower;
+$card-footer-color: $card-color;
+$card-box-shadow: 0 6px 4px 0 $drop-shadow-color;
+
+$card-primary-background: $card-background;
+$card-primary-color: $card-color;
+$card-primary-header-background: color($brand-primary lightness(10%));
+$card-primary-header-color: $card-color;
+$card-primary-footer-background: $card-footer-background;
+$card-primary-footer-color: $card-footer-color;
+$card-primary-border-color: color($brand-primary lightness(-5%));
+
+$card-secondary-background: $card-background;
+$card-secondary-color: $card-color;
+$card-secondary-header-background: color($brand-secondary lightness(10%));
+$card-secondary-header-color: $card-color;
+$card-secondary-footer-background: $card-footer-background;
+$card-secondary-footer-color: $card-footer-color;
+$card-secondary-border-color: color($brand-secondary lightness(-5%));
+
+$card-inverse-background: $card-background;
+$card-inverse-color: $card-color;
+$card-inverse-header-background: color($brand-inverse lightness(70%));
+$card-inverse-header-color: $text-color-inverse;
+$card-inverse-footer-background: $card-footer-background;
+$card-inverse-footer-color: $card-footer-color;
+$card-inverse-border-color: color($brand-inverse lightness(-5%));
+
+$card-success-background: $card-background;
+$card-success-color: $card-color;
+$card-success-header-background: color($brand-success lightness(10%));
+$card-success-header-color: color($brand-success lightness(-5%));
+$card-success-footer-background: $card-footer-background;
+$card-success-footer-color: $card-footer-color;
+$card-success-border-color: $state-success-border;
+
+$card-information-background: $card-background;
+$card-information-color: $card-color;
+$card-information-header-background: color($brand-information lightness(10%));
+$card-information-header-color: color($brand-information lightness(-5%));
+$card-information-footer-background: $card-footer-background;
+$card-information-footer-color: $card-footer-color;
+$card-information-border-color: $state-information-border;
+
+$card-warning-background: $card-background;
+$card-warning-color: $card-color;
+$card-warning-header-background: color($brand-warning lightness(10%));
+$card-warning-header-color: color($brand-warning lightness(-5%));
+$card-warning-footer-background: $card-footer-background;
+$card-warning-footer-color: $card-footer-color;
+$card-warning-border-color: $state-warning-border;
+
+$card-alert-background: $card-background;
+$card-alert-color: $card-color;
+$card-alert-header-background: color($brand-alert lightness(10%));
+$card-alert-header-color: color($brand-alert lightness(-5%));
+$card-alert-footer-background: $card-footer-background;
+$card-alert-footer-color: $card-footer-color;
+$card-alert-border-color: $state-alert-border;
+
+
+/* jumbotron */
+$jumbotron-background: $text-contrast-base;
+$jumbotron-color: $text-color-default;
+$jumbotron-box-shadow: 0 6px 4px 0 $drop-shadow-color;

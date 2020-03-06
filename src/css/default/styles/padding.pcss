@@ -1,0 +1,105 @@
+.p-0 {
+    padding: 0 !important;
+}
+
+.p-1 {
+    padding: $padding-unit !important;
+}
+
+.px-1 {
+    padding-left: $padding-unit !important;
+    padding-right: $padding-unit !important;
+}
+
+.py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
+.pl-sm {
+    padding-left: calc($padding-unit * 0.5) !important;
+}
+
+.pl-n-sm {
+    padding-left: calc($padding-unit * -0.5) !important;
+}
+
+@for $count from 1 to 10 by 1 {
+.pl-$count {
+    padding-left: calc($padding-unit * $count) !important;
+}}
+
+@for $count from -10 to -1 by 1 {
+.pl-n$count {
+    padding-left: calc($padding-unit * $count) !important;
+}}
+
+.pr-0 {
+    padding-right: 0 !important;
+}
+
+.pr-sm {
+    padding-right: calc($padding-unit * 0.5) !important;
+}
+
+.pr-n-sm {
+    padding-right: calc($padding-unit * -0.5) !important;
+}
+
+@for $count from 1 to 10 by 1 {
+.pr-$count {
+    padding-right: calc($padding-unit * $count) !important;
+}}
+
+@for $count from -10 to -1 by 1 {
+.pr-n$count {
+    padding-right: calc($padding-unit * $count) !important;
+}}
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.pt-sm {
+    padding-top: calc($padding-unit * 0.5) !important;
+}
+
+.pt-n-sm {
+    padding-top: calc($padding-unit * -0.5) !important;
+}
+
+@for $count from 1 to 10 by 1 {
+.pt-$count {
+    padding-top: calc($padding-unit * $count) !important;
+}}
+
+@for $count from -10 to -1 by 1 {
+.pt-n$count {
+    padding-top: calc($padding-unit * $count) !important;
+}}
+
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+.pb-sm {
+    padding-bottom: calc($padding-unit * 0.5) !important;
+}
+
+.pb-n-sm {
+    padding-bottom: calc($padding-unit * -0.5) !important;
+}
+
+@for $count from 1 to 10 by 1 {
+.pb-$count {
+    padding-bottom: calc($padding-unit * $count) !important;
+}}
+
+@for $count from -10 to -1 by 1 {
+.pb-n$count {
+    padding-bottom: calc($padding-unit * $count) !important;
+}}
