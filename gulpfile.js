@@ -11,6 +11,7 @@ const ifCondition = require('gulp-if');
 const inject = require('gulp-inject-string');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
+const replace = require('gulp-replace');
 
 const es = require('event-stream');
 
@@ -22,7 +23,7 @@ const cssRoot = './src/css';
 function remove(assets) {
     if (!Array.isArray(assets)) throw error('no assets defined to clean');
 
-    return gulp.src(assets, { read: false })
+    return gulp.src(assets, { allowEmpty: true, read: false })
         .pipe(clean());
 }
 
@@ -180,7 +181,7 @@ function watch() {
 
     let css = ['./src/css/**/*'];
     gulp.watch(css, function reloadCSS() {
-        return es.merge(compileThemeStream('default'),compileThemeStream('dark')).pipe(server.notify());
+        return es.merge(compileThemeStream('default'), compileThemeStream('dark')).pipe(server.notify());
     });
 
     let app = ['./app.js'];
@@ -191,6 +192,22 @@ function watch() {
 
 function error(err) {
     return new Error(err);
+}
+
+function buildGhpages(resolve) {
+    return es.merge([
+        gulp.src(['./wwwroot/css/*.css'], { allowEmpty: true })
+            .pipe(cleanCSS())
+            .pipe(gulp.dest('./public/css')),
+        gulp.src(['./node_modules/@fortawesome/fontawesome-free/webfonts/**'], { allowEmpty: true })
+            .pipe(gulp.dest('./public/fonts')),
+        gulp.src(['./src/views/index.html'], { allowEmpty: true })
+            .pipe(replace('href="/"', 'href="/purecss-ui/"'))
+            .pipe(replace('css/', 'public/css/'))
+            .pipe(replace('fonts/', 'public/fonts/'))
+            .pipe(replace('images/', 'public/images/'))
+            .pipe(gulp.dest('./'))
+    ]).on('end', resolve);
 }
 
 exports['clean:dev'] = remove.bind(this, ['wwwroot/*']);
@@ -226,3 +243,10 @@ exports['build:dist'] = gulp.series(
 );
 
 exports['watch'] = watch;
+
+exports['build:ghpages'] = gulp.series(
+    remove.bind(this, ['wwwroot/*', 'public/css/*', 'public/fonts/*', 'index.html']),
+    buildCssLib,
+    buildTheme,
+    buildGhpages
+);
