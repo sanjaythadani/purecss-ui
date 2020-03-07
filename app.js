@@ -6,13 +6,10 @@ var cookieParser = require('cookie-parser');
 var http = require('http');
 var port = process.env.PORT || 3000;
 
-var healthcheck = require('./routes/healthcheck');
-var index = require('./routes/index');
-
 var app = express();
 
 app.set('port', port);
-app.set('views', path.join(__dirname, '../views'));
+app.set('views', path.join(__dirname, './src/views'));
 app.engine('html', require('hogan-express'));
 app.set('layout', 'index');
 app.set('view engine', 'html');
@@ -22,13 +19,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 var oneDay = 86400000; // in milliseconds
-app.use('/css', express.static(path.join(__dirname, '../../wwwroot/css'), { maxAge: oneDay }));
-app.use('/fonts', express.static(path.join(__dirname, '../../wwwroot/fonts'), { maxAge: oneDay }));
-app.use('/images', express.static(path.join(__dirname, '../../wwwroot/images'), { maxAge: oneDay }));
-app.use('/js', express.static(path.join(__dirname, '../../wwwroot/js'), { maxAge: oneDay }));
+app.use('/css', express.static(path.join(__dirname, './wwwroot/css'), { maxAge: oneDay }));
+app.use('/fonts', express.static(path.join(__dirname, './wwwroot/fonts'), { maxAge: oneDay }));
+app.use('/images', express.static(path.join(__dirname, './wwwroot/images'), { maxAge: oneDay }));
+app.use('/js', express.static(path.join(__dirname, './wwwroot/js'), { maxAge: oneDay }));
 
-app.use('/healthcheck', healthcheck);
-app.use('/', index);
+app.use('/', function(req, res, next) {
+    res.render(
+        'index',
+        function(err, html) {
+            res.send(html);
+        }
+    );
+});
 
 var server = http.createServer(app);
 server.listen(port);

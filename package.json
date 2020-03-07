@@ -10,7 +10,7 @@
     "src/*"
   ],
   "scripts": {
-    "serve": "node ./src/js/app.js",
+    "serve": "node app.js",
     "watch": "gulp watch",
     "build:dev": "gulp build:dev",
     "build:dist": "gulp build:dist"

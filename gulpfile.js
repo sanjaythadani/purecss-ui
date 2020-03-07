@@ -169,7 +169,7 @@ function buildDist(resolve) {
 
 function watch() {
     let env = argv.env || 'development';
-    let server = gls('src/js/app.js', { env: { NODE_ENV: env } });
+    let server = gls('app.js', { env: { NODE_ENV: env } });
 
     server.start();
 
@@ -183,7 +183,7 @@ function watch() {
         return es.merge(compileThemeStream('default'),compileThemeStream('dark')).pipe(server.notify());
     });
 
-    let app = ['./src/js/**/*.js'];
+    let app = ['./app.js'];
     gulp.watch(app, function reloadApp() {
         server.start.bind(server)();
     });
