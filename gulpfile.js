@@ -202,9 +202,9 @@ function buildGhpages(resolve) {
         gulp.src(['./node_modules/@fortawesome/fontawesome-free/webfonts/**'], { allowEmpty: true })
             .pipe(gulp.dest('./public/fonts')),
         gulp.src(['./src/views/index.html'], { allowEmpty: true })
-            .pipe(replace('css/', 'gh-pages/public/css/'))
-            .pipe(replace('fonts/', 'gh-pages/public/fonts/'))
-            .pipe(replace('images/', 'gh-pages/public/images/'))
+            .pipe(replace('css/', 'public/css/'))
+            .pipe(replace('fonts/', 'public/fonts/'))
+            .pipe(replace('images/', 'public/images/'))
             .pipe(gulp.dest('./'))
     ]).on('end', resolve);
 }
