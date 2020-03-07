@@ -197,11 +197,11 @@ function buildGhpages(resolve) {
     return es.merge([
         gulp.src(['./wwwroot/css/*.css'], { allowEmpty: true })
             .pipe(cleanCSS())
-            .pipe(gulp.dest('./css')),
+            .pipe(gulp.dest('./assets/css')),
         gulp.src(['./node_modules/@fortawesome/fontawesome-free/webfonts/**'], { allowEmpty: true })
-            .pipe(gulp.dest('./fonts')),
+            .pipe(gulp.dest('./assets/fonts')),
         gulp.src(['./public/images/**'], { allowEmpty: true })
-            .pipe(gulp.dest('./images')),
+            .pipe(gulp.dest('./assets/images')),
         gulp.src(['./src/views/index.html'], { allowEmpty: true })
             .pipe(gulp.dest('./'))
     ]).on('end', resolve);
@@ -242,7 +242,7 @@ exports['build:dist'] = gulp.series(
 exports['watch'] = watch;
 
 exports['build:ghpages'] = gulp.series(
-    remove.bind(this, ['wwwroot/*', 'css/*', 'fonts/*', 'images/*', 'index.html']),
+    remove.bind(this, ['wwwroot/*', 'assets/*', 'index.html']),
     buildCssLib,
     buildTheme,
     buildGhpages
