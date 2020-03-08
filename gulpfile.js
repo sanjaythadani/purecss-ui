@@ -174,7 +174,7 @@ function watch() {
 
     server.start();
 
-    let views = ['./src/views/**/*.html'];
+    let views = ['./index.html'];
     gulp.watch(views, function reloadHTML() {
         return gulp.src(views, { allowEmpty: true }).pipe(server.notify());
     });
@@ -201,17 +201,17 @@ function buildGhpages(resolve) {
             .pipe(gulp.dest('./public/css')),
         gulp.src(['./node_modules/@fortawesome/fontawesome-free/webfonts/**'], { allowEmpty: true })
             .pipe(gulp.dest('./public/fonts')),
-        gulp.src(['./src/views/index.html'], { allowEmpty: true })
+        gulp.src(['./index.html'], { allowEmpty: true })
             .pipe(replace('href="/"', 'href="/purecss-ui/"'))
-            .pipe(replace('css/', 'public/css/'))
-            .pipe(replace('fonts/', 'public/fonts/'))
-            .pipe(replace('images/', 'public/images/'))
+            .pipe(replace('"css/', '"public/css/'))
+            .pipe(replace('"fonts/', '"public/fonts/'))
+            .pipe(replace('"images/', '"public/images/'))
             .pipe(gulp.dest('./'))
     ]).on('end', resolve);
 }
 
 exports['clean:dev'] = remove.bind(this, ['wwwroot/*']);
-exports['clean:prod'] = remove.bind(this, ['dist/*']);
+exports['clean:dist'] = remove.bind(this, ['dist/*']);
 
 exports['clean'] = gulp.parallel(
     remove.bind(this, ['wwwroot/*']),

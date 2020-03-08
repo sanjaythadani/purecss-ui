@@ -1,9 +1,19 @@
 {
   "name": "purecss-ui",
-  "version": "1.0.0",
-  "description": "Design system built on Pure.css",
+  "version": "1.0.2",
+  "description": "Design system built on Pure.css.",
   "author": "Sanjay Thadani",
   "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanjaythadani/purecss-ui"
+  },
+  "keywords": [
+    "purecss",
+    "purecss-ui",
+    "purecss ui"
+  ],
   "files": [
     "dist/*",
     "public/*",
@@ -34,6 +44,7 @@
     "gulp-livereload": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
     "hogan-express": "^0.5.2",
     "postcss-calc": "^7.0.1",
     "postcss-color-function": "^4.1.0",

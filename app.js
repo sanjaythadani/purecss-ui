@@ -9,7 +9,7 @@ var port = process.env.PORT || 3000;
 var app = express();
 
 app.set('port', port);
-app.set('views', path.join(__dirname, './src/views'));
+app.set('views', __dirname);
 app.engine('html', require('hogan-express'));
 app.set('layout', 'index');
 app.set('view engine', 'html');

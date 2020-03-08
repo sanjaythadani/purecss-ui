@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>purecss-ui</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="public/images/favicon.ico" asp-append-version="true">
-    <link href="public/css/lib.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" asp-append-version="true">
+    <link href="css/lib.css" rel="stylesheet">
 
     <script>
-        var theme = location.href.indexOf('theme=dark') != -1 ? 'dark' : 'default';
-        var link = document.createElement('link');
-        link.href = 'public/css/purecss-ui-' + theme + '.css';
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        document.getElementsByTagName('head')[0].appendChild(link);
+        var theme = location.href.indexOf("theme=dark") != -1 ? "dark" : "default";
+        var link = document.createElement("link");
+        link.href = "css/purecss-ui-" + theme + ".css";
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        document.getElementsByTagName("head")[0].appendChild(link);
     </script>
 </head>
 
@@ -28,15 +28,15 @@
                         <div id="menu-container" class="pure-g flex-align-center">
                             <div class="pure-u-10-24">
                                 <div class="pure-menu-item brand flex-align-center">
-                                    <a href="/purecss-ui/" class="no-decorator p-0">
-                                        <img src="public/images/pure-ui-logo.png" class="brand-logo" />
+                                    <a href="/" class="no-decorator p-0">
+                                        <img src="images/pure-ui-logo.png" class="brand-logo" />
                                         <span class="text-xl text-primary text-bold brand-title ml-sm">Pure.css UI</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="pure-u-14-24 h-align-left">
                                 <ul class="pure-menu-list">
-                                    <li class="pure-menu-item"><a href="/purecss-ui/" class="pure-menu-link">Default Theme</a></li>
+                                    <li class="pure-menu-item"><a href="/" class="pure-menu-link">Default Theme</a></li>
                                     <li class="pure-menu-item"><a href="?theme=dark" class="pure-menu-link">Dark Theme</a></li>
                                 </ul>
                             </div>
@@ -391,9 +391,14 @@
     <div class="footer-content">
         <div class="pure-g">
             <div class="pure-u-md-1-24 pure-u-lg-2-24"></div>
-            <div class="pure-u-1 pure-u-md-22-24 pure-u-lg-20-24">
+            <div class="pure-u-1 pure-u-md-11-24 pure-u-lg-10-24">
                 <div class="mx-1 text-information">
-                    <span>Footer content</span>
+                    <span>Content on this site licensed under the <a href="https://github.com/sanjaythadani/purecss-ui/blob/master/LICENSE" class="text-information">MIT License</a>.</span>
+                </div>
+            </div>
+            <div class="pure-u-1 pure-u-md-11-24 pure-u-lg-10-24 h-align-right">
+                <div class="mx-1 text-information">
+                    <a href="https://github.com/sanjaythadani/purecss-ui" class="text-information">GitHub Project</a>
                 </div>
             </div>
         </div>
