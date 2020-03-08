@@ -245,7 +245,7 @@ exports['build:dist'] = gulp.series(
 exports['watch'] = watch;
 
 exports['build:ghpages'] = gulp.series(
-    remove.bind(this, ['wwwroot/*', 'public/css/*', 'public/fonts/*', 'index.html']),
+    remove.bind(this, ['wwwroot/*', 'public/css/*', 'public/fonts/*']),
     buildCssLib,
     buildTheme,
     buildGhpages
