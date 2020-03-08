@@ -4,6 +4,16 @@
   "description": "Design system built on Pure.css",
   "author": "Sanjay Thadani",
   "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanjaythadani/purecss-ui"
+  },
+  "keywords": [
+    "purecss",
+    "purecss-ui",
+    "purecss ui"
+  ],
   "files": [
     "dist/*",
     "public/*",
