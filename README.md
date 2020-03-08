@@ -1,11 +1,12 @@
 # purecss-ui
 
-purecss-ui is a design system built on Pure.css.  
+<i>purecss-ui</i> is a design system processed via PostCSS.  
+Demo: https://sanjaythadani.github.io/purecss-ui/
+
+It is built on <i>Pure.css</i>, a set of small responsive css modules.  
 https://purecss.io/
 
-It attempts to use css processed through PostCSS o create a design system with a minimal footprint that is easily customized for varying custom themes.
-
-It currenly supports the follwing themes:  
+It attempts to use css processed through PostCSS o create a design system with a minimal footprint that is easily customized. It currenly supports the follwing themes:  
 -- default  
 -- dark  
 
