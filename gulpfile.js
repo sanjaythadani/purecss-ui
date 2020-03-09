@@ -227,3 +227,26 @@ exports['build:dist'] = gulp.series(
 );
 
 exports['watch'] = watch;
+
+function buildGhpages(resolve) {
+    return es.merge([
+        gulp.src(['./wwwroot/css/*.css'], { allowEmpty: true })
+            .pipe(cleanCSS())
+            .pipe(gulp.dest('./public/css')),
+        gulp.src(['./node_modules/@fortawesome/fontawesome-free/webfonts/**'], { allowEmpty: true })
+            .pipe(gulp.dest('./public/fonts')),
+        gulp.src(['./index.html'], { allowEmpty: true })
+            .pipe(replace('href="/"', 'href="/purecss-ui/"'))
+            .pipe(replace('"css/', '"public/css/'))
+            .pipe(replace('"fonts/', '"public/fonts/'))
+            .pipe(replace('"images/', '"public/images/'))
+            .pipe(gulp.dest('./'))
+    ]).on('end', resolve);
+}
+
+exports['build:ghpages'] = gulp.series(
+    remove.bind(this, ['wwwroot/*', 'public/css/*', 'public/fonts/*']),
+    buildCssLib,
+    buildTheme,
+    buildGhpages
+);
